@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "169772084051",
+    "project_id": "car-center-3c2eb",
+    "storage_bucket": "car-center-3c2eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169772084051:android:ec27a56eb3f79acd01cfa6",
+        "android_client_info": {
+          "package_name": "com.example.carcenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169772084051-jnqn8aum16gh53b7fpsi8udgqfl87ufv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carcenter",
+            "certificate_hash": "c999729fcd683f2f9495796b4231e1d30631c160"
+          }
+        },
+        {
+          "client_id": "169772084051-qprhqrr8k792lbctjfg1eabvn9l7k9as.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzacMgc3I_QIoWkILDpN6e1WkZSSifoWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169772084051-qprhqrr8k792lbctjfg1eabvn9l7k9as.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
