@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 class Car{
   final String title, image, company, year , importyear, description, Did;
   final int milage, demand, soldAt ;
+  final bool listed, sold;
 
-  Car( {
+
+  Car({
+    required this.listed,
+    required this.sold,
     required this.title,
     required this.image,
     required this.company,
@@ -21,16 +25,19 @@ class Car{
 
   factory Car.fromMap(Map<String, dynamic> data, String Id){
 
-    return Car(title: '',
+    return Car(
+        title: data['title'],
         image: data['image'] ?? '',
         company: data['company'] ?? '',
         year: data['year'] ?? '',
         importyear: data['import'] ?? '',
         description: data['description'] ?? '',
-        milage: data['milage'] ?? 0,
+        milage: data['mileage'] ?? 0,
         demand: data['demand'] ?? 0,
         soldAt: data['soldAt'] ?? 0,
-        Did: data['Did'] ?? '',
+        Did: data['id'] ?? '',
+        listed: data['listed'] ?? true,
+        sold: data['sold'] ?? false,
     );
   }
 
