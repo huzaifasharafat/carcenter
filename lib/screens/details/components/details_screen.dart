@@ -13,8 +13,9 @@ import '../../../models/dealer.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Car car;
+  final int contact;
 
-  const DetailsScreen({super.key, required this.car});
+  const DetailsScreen({super.key, required this.car, required this.contact});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: car.color,
       appBar: buildAppBar(context),
-      body: body(car: car,),
+      body: body(car: car, contact: contact),
     );
   }
 

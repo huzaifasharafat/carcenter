@@ -12,24 +12,31 @@ import '../../../models/car.dart';
 
 class body extends StatelessWidget {
   final Car car;
+  final int contact;
 
-  const body({super.key, required this.car});
+  const body({super.key, required this.car, required this.contact});
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
+      physics: const AlwaysScrollableScrollPhysics(
+          parent: BouncingScrollPhysics()
+      ),
 
       child: Column(
+
 
         children: <Widget>[
 
           SizedBox(
 
+
             height: size.height,
             child: Stack(
               children: <Widget> [
+
 
                 Container(
 
@@ -49,7 +56,7 @@ class body extends StatelessWidget {
                   child: Column(
                     children: <Widget> [
                       //ColorAndSize(car: car),
-                      Description(car: car),
+                      Description(car: car,contact : contact),
                       // const CounterWithFavBtn(),
                       //AddToCart(car: car),
                     ],

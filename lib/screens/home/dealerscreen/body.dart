@@ -81,10 +81,11 @@ class getcarlist extends StatelessWidget {
           StreamProvider<List<Car>>.value(
             value: DatabaseService().streamcars(dealer.id),
             initialData: [],),
+
         ],
         child: Scaffold(
           appBar: buildAppBar(context),
-          body: CarBody(),
+          body: CarBody(contact :dealer.contact),
         )
     );
   }

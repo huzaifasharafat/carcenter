@@ -36,7 +36,7 @@ class ItemCard extends StatelessWidget {
               style: TextStyle(color: kTextLightColor),),
           ),
           Text(
-            "\$${dealer!.contact}",
+            "0${dealer!.contact}",
             style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),

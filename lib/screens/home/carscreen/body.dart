@@ -6,6 +6,9 @@ import 'package:carcenter/screens/home/carscreen/item_card.dart';
 import 'package:provider/provider.dart';
 
 class CarBody extends StatelessWidget {
+  final int contact;
+  CarBody({super.key, required this.contact});
+
   @override
   Widget build(BuildContext context) {
     var  cars = Provider.of<List<Car>>(context);
@@ -47,6 +50,7 @@ class CarBody extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => DetailsScreen(
                           car: cars[index],
+                            contact: contact
                       )
                       )
                     ),

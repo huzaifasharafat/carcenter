@@ -39,7 +39,7 @@ class ItemCard extends StatelessWidget {
                 style: const TextStyle(color: kTextLightColor),),
             ),
             Text(
-              "\$${car!.demand}",
+              "RS ${car!.demand}",
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),

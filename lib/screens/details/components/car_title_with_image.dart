@@ -20,12 +20,12 @@ class ProductTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children: <Widget> [
-          Text(
-            car.title,
-            style:  TextStyle(
-                color: Colors.white
-            ),
-          ),
+          // Text(
+          //   car.title,
+          //   style:  TextStyle(
+          //       color: Colors.white
+          //   ),
+          // ),
           Text(
             car.title,
             style:
