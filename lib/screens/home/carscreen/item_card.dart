@@ -2,7 +2,6 @@ import 'package:carcenter/models/car.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../models/Product.dart';
 
 class ItemCard extends StatelessWidget {
   final Car? car;
@@ -24,7 +23,7 @@ class ItemCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget> [
             Container(
-              padding: EdgeInsets.all(kDefaultPaddin),
+              padding: const EdgeInsets.all(kDefaultPaddin),
               height: 170,
               width: 160,
               // decoration: BoxDecoration(
@@ -37,7 +36,7 @@ class ItemCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric( vertical: kDefaultPaddin/4 ),
               child: Text(
                 car!.title,
-                style: TextStyle(color: kTextLightColor),),
+                style: const TextStyle(color: kTextLightColor),),
             ),
             Text(
               "\$${car!.demand}",

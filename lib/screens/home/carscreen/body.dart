@@ -1,9 +1,7 @@
 import 'package:carcenter/models/car.dart';
 import 'package:flutter/material.dart';
 import 'package:carcenter/constants.dart';
-import 'package:carcenter/models/Product.dart';
 import 'package:carcenter/screens/details/components/details_screen.dart';
-import 'package:carcenter/screens/home/carscreen/categories.dart';
 import 'package:carcenter/screens/home/carscreen/item_card.dart';
 import 'package:provider/provider.dart';
 

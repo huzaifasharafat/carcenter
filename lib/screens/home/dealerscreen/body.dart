@@ -3,14 +3,10 @@ import 'package:carcenter/models/dealer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carcenter/constants.dart';
-import 'package:carcenter/models/Product.dart';
-import 'package:carcenter/screens/details/components/details_screen.dart';
-import 'package:carcenter/screens/home/dealerscreen/categories.dart';
 import 'package:carcenter/screens/home/dealerscreen/item_card.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
-import '../../../logIn.dart';
 import '../../../models/db.dart';
 import '../carscreen/body.dart';
 
@@ -22,8 +18,8 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
 
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: kDefaultPaddin),
           // child: Text(
           //   "Women",
           //   style: Theme.of(context)
@@ -79,8 +75,6 @@ class getcarlist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var user = Provider.of<User?>(context);
-    bool loggedIn = user != null;
 
     return MultiProvider(
         providers: [
@@ -92,7 +86,7 @@ class getcarlist extends StatelessWidget {
           appBar: buildAppBar(context),
           body: CarBody(),
         )
-    );;
+    );
   }
 
   AppBar buildAppBar(BuildContext context) {
