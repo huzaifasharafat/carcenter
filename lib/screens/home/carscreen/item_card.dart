@@ -24,7 +24,7 @@ class ItemCard extends StatelessWidget {
           children: <Widget> [
             Container(
               padding: const EdgeInsets.all(kDefaultPaddin),
-              height: 170,
+              height: 155,
               width: 160,
               // decoration: BoxDecoration(
               //     //color: Color(0xFF3D82AE),

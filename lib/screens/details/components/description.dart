@@ -49,7 +49,7 @@ class Description extends StatelessWidget {
                 DataRow(cells: [
                   DataCell(Text(car.milage.toString())),
                   DataCell(Text(car.year)),
-                  DataCell(Text(contact.toString())),
+                  DataCell(Text('0${contact}')),
                   DataCell(Text(car.company)),
                 ])
               ]

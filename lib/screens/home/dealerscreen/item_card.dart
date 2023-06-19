@@ -22,7 +22,7 @@ class ItemCard extends StatelessWidget {
         children: <Widget> [
           Container(
             padding: EdgeInsets.all(kDefaultPaddin),
-             height: 180,
+             height: 170,
              width: 160,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16)
