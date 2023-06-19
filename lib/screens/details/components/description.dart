@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../models/Product.dart';
+import '../../../models/car.dart';
 
 class Description extends StatelessWidget {
   const Description({
     super.key,
-    required this.product,
+    required this.car,
   });
 
-  final Product product;
+  final Car car;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class Description extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
           vertical: kDefaultPaddin),
       child: Text(
-        product.description,
+        car.description,
         style: TextStyle(height: 1.5),
       ),
     );

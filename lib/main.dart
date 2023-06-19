@@ -1,3 +1,5 @@
+import 'package:carcenter/models/car.dart';
+import 'package:carcenter/models/dealer.dart';
 import 'package:flutter/material.dart';
 import 'package:carcenter/constants.dart';
 import 'package:carcenter/models/Product.dart';
@@ -18,6 +20,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -34,9 +37,16 @@ class MyApp extends StatelessWidget {
             value: DatabaseService().streamProducts(),
 
             initialData: [],
-        )
-        ,
+        ),
+        //StreamProvider<String?>.value(value: '1', initialData: initialData)
+        
+        StreamProvider<List<Dealer>>.value(
+            value: DatabaseService().streamDealers(),
+            initialData: [],
+        ),
+        
       ],
+      
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

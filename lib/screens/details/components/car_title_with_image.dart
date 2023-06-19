@@ -1,3 +1,4 @@
+import 'package:carcenter/models/car.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -6,10 +7,10 @@ import '../../../models/Product.dart';
 class ProductTitleWithImage extends StatelessWidget {
   const ProductTitleWithImage({
     super.key,
-    required this.product,
+    required this.car,
   });
 
-  final Product product;
+  final Car car;
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +20,14 @@ class ProductTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children: <Widget> [
-          const Text(
-            "Aristocratic Hand Bag",
+          Text(
+            car.title,
             style:  TextStyle(
                 color: Colors.white
             ),
           ),
           Text(
-            product.title,
+            car.title,
             style:
             Theme.of(context)
                 .textTheme
@@ -44,7 +45,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   children: [
                     TextSpan(text: "Price"),
                     TextSpan(
-                        text: "\$${product.price}",
+                        text: "\$${car.demand}",
                         style: Theme.of(context)
                             .textTheme
                             .headlineSmall
@@ -59,7 +60,7 @@ class ProductTitleWithImage extends StatelessWidget {
               ),
               SizedBox(width: kDefaultPaddin,),
               Expanded(child: Image.network(
-                product.image,
+                car.image,
                 fit: BoxFit.fitWidth,
               )
               ),

@@ -5,13 +5,15 @@ import 'package:carcenter/screens/details/components/add_to_cart.dart';
 import 'package:carcenter/screens/details/components/color_and_size.dart';
 import 'package:carcenter/screens/details/components/counter_with_fav_btn.dart';
 import 'package:carcenter/screens/details/components/description.dart';
-import 'package:carcenter/screens/details/components/product_title_with_image.dart';
+import 'package:carcenter/screens/details/components/car_title_with_image.dart';
+
+import '../../../models/car.dart';
 
 
 class body extends StatelessWidget {
-  final Product product;
+  final Car car;
 
-  const body({super.key, required this.product});
+  const body({super.key, required this.car});
 
   @override
   Widget build(BuildContext context) {
@@ -46,14 +48,14 @@ class body extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget> [
-                      ColorAndSize(product: product),
-                      Description(product: product),
-                      const CounterWithFavBtn(),
-                      AddToCart(product: product),
+                      //ColorAndSize(car: car),
+                      Description(car: car),
+                      // const CounterWithFavBtn(),
+                      //AddToCart(car: car),
                     ],
                   ),
                 ),
-                ProductTitleWithImage(product: product)
+                ProductTitleWithImage(car: car)
               ],
             ),
           )

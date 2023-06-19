@@ -5,9 +5,11 @@ class Car{
   final String title, image, company, year , importyear, description, Did;
   final int milage, demand, soldAt ;
   final bool listed, sold;
+  final Color color;
 
 
   Car({
+    required this.color ,
     required this.listed,
     required this.sold,
     required this.title,
@@ -26,7 +28,7 @@ class Car{
   factory Car.fromMap(Map<String, dynamic> data, String Id){
 
     return Car(
-        title: data['title'],
+        title: data['title'] ?? '',
         image: data['image'] ?? '',
         company: data['company'] ?? '',
         year: data['year'] ?? '',
@@ -38,6 +40,7 @@ class Car{
         Did: data['id'] ?? '',
         listed: data['listed'] ?? true,
         sold: data['sold'] ?? false,
+      color: Color(0xFF3D82AE),
     );
   }
 

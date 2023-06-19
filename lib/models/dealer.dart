@@ -21,13 +21,13 @@ class Dealer{
   factory Dealer.fromMap(Map<String, dynamic> data, String Id){
 
     return Dealer(
-      title: data['title'],
+      title: data['title'] ?? '',
       image: data['image'] ?? '',
       listed: data['listed'] ?? true,
-      id: data['image'] ?? '',
-      userid: data['image'] ?? '',
-      location: data['image'] ?? '',
-      contact: data['image'] ?? '',
+      id: data['id'] ?? '',
+      userid: data['userid'] ?? '',
+      location: data['location'] ?? '',
+      contact: data['contact'] ?? 0,
     );
   }
 

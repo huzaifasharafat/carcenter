@@ -1,15 +1,15 @@
+import 'package:carcenter/models/dealer.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../models/Product.dart';
 
 class ItemCard extends StatelessWidget {
-  final Product? product;
+  final Dealer? dealer;
   final VoidCallback? press;
 
   const ItemCard({
     Key? key,
-    this.product,
+    this.dealer,
     this.press,
   }) : super(key: key);
 
@@ -22,22 +22,21 @@ class ItemCard extends StatelessWidget {
         children: <Widget> [
           Container(
             padding: EdgeInsets.all(kDefaultPaddin),
-            // height: 180,
-            // width: 160,
+             height: 180,
+             width: 160,
             decoration: BoxDecoration(
-                color: product?.color,
                 borderRadius: BorderRadius.circular(16)
             ),
-            child: Image.network(product!.image),
+            child: Image.network(dealer!.image),
           ),
           Padding(
             padding: const EdgeInsets.symmetric( vertical: kDefaultPaddin/4 ),
             child: Text(
-              product!.title,
+              dealer!.title,
               style: TextStyle(color: kTextLightColor),),
           ),
           Text(
-            "\$${product!.price}",
+            "\$${dealer!.contact}",
             style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),

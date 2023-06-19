@@ -22,7 +22,7 @@ class DatabaseService {
 
   }
   Stream<List<Dealer>> streamDealers()  {
-    var ref =  _db.collection('Products');
+    var ref =  _db.collection('Dealers');
 
 
     return ref.snapshots().map((list) =>
@@ -39,6 +39,7 @@ class DatabaseService {
     ;
 
   }
+
 
 
 }

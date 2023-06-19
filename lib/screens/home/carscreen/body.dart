@@ -1,30 +1,31 @@
+import 'package:carcenter/models/car.dart';
 import 'package:flutter/material.dart';
 import 'package:carcenter/constants.dart';
 import 'package:carcenter/models/Product.dart';
 import 'package:carcenter/screens/details/components/details_screen.dart';
-import 'package:carcenter/screens/home/components/categories.dart';
-import 'package:carcenter/screens/home/components/item_card.dart';
+import 'package:carcenter/screens/home/carscreen/categories.dart';
+import 'package:carcenter/screens/home/carscreen/item_card.dart';
 import 'package:provider/provider.dart';
 
-class Body extends StatelessWidget {
+class CarBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var  products = Provider.of<List<Product>>(context);
+    var  cars = Provider.of<List<Car>>(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
-          child: Text(
-            "Women",
-            style: Theme.of(context)
-            .textTheme
-            .headlineSmall
-            ?.copyWith(fontWeight: FontWeight.bold)
-            ,
-          ),
+          // child: Text(
+          //   "Women",
+          //   style: Theme.of(context)
+          //   .textTheme
+          //   .headlineSmall
+          //   ?.copyWith(fontWeight: FontWeight.bold)
+          //   ,
+          // ),
         ),
-        Categories(),
+       // Categories(),
         Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
@@ -33,7 +34,7 @@ class Body extends StatelessWidget {
                     parent: BouncingScrollPhysics()
                 ),// make scroll bounce
                 scrollDirection: Axis.vertical,
-                itemCount: products.length,
+                itemCount: cars.length,
                   gridDelegate: const
                       SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
@@ -42,12 +43,12 @@ class Body extends StatelessWidget {
                           crossAxisSpacing: kDefaultPaddin,
                       ),
                   itemBuilder: (context, index) => ItemCard(
-                    product: products[index],
+                    car: cars[index],
                     press: () => Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => DetailsScreen(
-                          product: products[index],
+                          car: cars[index],
                       )
                       )
                     ),
